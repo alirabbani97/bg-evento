@@ -33,7 +33,7 @@ export default function Home() {
         ></input>
       </form>
 
-      <section className="flex text-white/50 gap-x-4 text-sm mt-5">
+      <section className="flex text-white/50 gap-x-4 text-sm mt-5 ">
         <p>Popular:</p>
         <ul className="flex gap-x-2 font-semibold">
           {links.map((link) => (
