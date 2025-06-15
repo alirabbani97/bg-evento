@@ -19,15 +19,15 @@ export default function Home() {
       </h1>
       <p className=" text-xl lg:text-3xl text-white/50 mb-12 mt-7 ">
         Browse more than{" "}
-        <span className="italic font-bold text-[#a4f839] underline">
+        <span className="italic font-bold text-accent underline">
           10,000 events
         </span>{" "}
         around you
       </p>
-
+ 
       <form className="w-full sm:w-[560px]">
         <input
-          className=" w-full h-16  bg-white/[7%] px-6 outline-none rounded-md ring-[#a4f839]/50 transition focus:ring-2 focus:bg-white/10"
+          className=" w-full h-16  bg-white/[7%] px-6 outline-none rounded-md ring-accent/50 transition focus:ring-2 focus:bg-white/10"
           placeholder="Search for events in any city..."
           spellCheck={false}
         ></input>
