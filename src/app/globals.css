@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.button-anim {
+  @apply hover:scale-105 active:scale-[1.02] focus:scale-105  cursor-pointer transition-all;
+}
+
 /* SCROLLBAR STYLING */
 /* Chrome, Edge, and Safari */
 ::-webkit-scrollbar {

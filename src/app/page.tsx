@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const links = [
   {
-    title: "Karachi",
-    link: "/events/karachi",
+    title: "Austin",
+    link: "/events/austin",
   },
   {
-    title: "Lahore",
-    link: "/events/lahore",
+    title: "Seattle",
+    link: "/events/seattle",
   },
 ];
 

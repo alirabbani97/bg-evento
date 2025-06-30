@@ -1,8 +1,15 @@
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
-export default function H1({ children }: { children: ReactNode }) {
+export default function H1({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <h1 className="text-3xl lg:text-6xl font-bold tracking-tight">
+    <h1 className={cn("text-3xl lg:text-6xl font-bold tracking-tight", className)}>
       {children}
     </h1>
   );
