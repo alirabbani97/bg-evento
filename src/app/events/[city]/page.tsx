@@ -10,7 +10,13 @@ type EventParamsProp = {
     city: string;
   };
 };
-
+// PAGE METADATA IMPLEMENTATION
+export async function generateMetadata({ params }: EventParamsProp) {
+  const city = params.city;
+  return {
+    title: `${city === "all" ? "All Events" : `Events in ${city}`} | Evento`,
+  };
+}
 export default function EventPage({ params }: EventParamsProp) {
   const city = params.city;
 

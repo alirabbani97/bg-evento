@@ -2,15 +2,24 @@ import H1 from "@/components/h1";
 import { EventoEvent } from "@/lib/types";
 import Image from "next/image";
 import React from "react";
+// PAGE METADATA IMPLEMENTATION
+export async function generateMetadata({ params }: EventParamsProp) {
+  const { slug } = await params;
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/events/${slug}`
+  );
+  const data: EventoEvent = await response.json();
 
+  return {
+    title: `${data.name || "Event"} | Evento`,
+  };
+}
 export default async function EventPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
-
 
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/events/${slug}`
